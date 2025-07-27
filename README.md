@@ -1,7 +1,7 @@
 # GWP-project
 
-* Website for predicting GWP and AL :point_right: [click](https://gwp-web-mtap-pnu.streamlit.app/)        
-* Prof. Chung: drygchung@gmail.com             
+* Website for predicting GWP and AL :point_right: [click](https://low-gwp-ml.streamlit.app/)        
+* Prof. Chung: drygchung@gmail.com              
   Yang Changwon: sht_ycw79@pusan.ac.kr (DFT)                  
   Guobin Zhao: sxmzhaogb@gmail.com (machine learning)           
   Kim, Haewon: haewon0673@naver.com (make figure,machine learning, DFT)                     
