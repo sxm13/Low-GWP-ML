@@ -1,0 +1,10 @@
+streamlit
+scikit-learn==1.3.2
+numpy==1.26.1
+pandas==2.1.0
+rdkit
+joblib==1.3.2
+stmol
+Pillow
+py3Dmol
+ipython_genutils
