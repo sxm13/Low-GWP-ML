@@ -3,7 +3,6 @@ import joblib
 from rdkit import Chem
 from rdkit.Chem import Descriptors
 import numpy as np
-from sklearn.preprocessing import StandardScaler
 from stmol import showmol
 import py3Dmol
 from rdkit.Chem import AllChem
@@ -16,7 +15,7 @@ def makeblock(smi):
     return mblock
 
 def render_mol(xyz):
-    xyzview = py3Dmol.view()#(width=400,height=400)
+    xyzview = py3Dmol.view()    #(width=400,height=400)
     xyzview.addModel(xyz,'mol')
     xyzview.setStyle({'stick':{}})
     xyzview.setBackgroundColor('white')
@@ -55,11 +54,11 @@ def predict(smiles, ip=None, homo_gap=None):
                 f = calculate_descriptors(smiles, fea)
             gwp_x.append(f)
         
-        scaler = joblib.load("scaler_MLP_LF.gz")
+        scaler = joblib.load("./webapp/scaler_MLP_LF.gz")
         lf_x = scaler.transform(np.array(lf_x).reshape(1, -1))
         
-        model_lf = joblib.load('mlp_LF.pkl')
-        model_gwp = joblib.load('rf_GWP.pkl')
+        model_lf = joblib.load('./webapp/mlp_LF.pkl')
+        model_gwp = joblib.load('./webapp/rf_GWP.pkl')
     
         lifetime = 10 ** model_lf.predict(lf_x)
         gwp = 10 ** model_gwp.predict(np.array(gwp_x).reshape(1, -1))
@@ -76,11 +75,11 @@ def predict(smiles, ip=None, homo_gap=None):
             f = calculate_descriptors(smiles, fea)
             gwp_x.append(f)
     
-        scaler = joblib.load("scaler_MLP_LF_geo.gz")
+        scaler = joblib.load("./webapp/scaler_MLP_LF_geo.gz")
         lf_x = scaler.transform(np.array(lf_x).reshape(1, -1))
         
-        model_lf = joblib.load('mlp_LF_geo.pkl')
-        model_gwp = joblib.load('rf_GWP_geo.pkl')
+        model_lf = joblib.load('./webapp/mlp_LF_geo.pkl')
+        model_gwp = joblib.load('./webapp/rf_GWP_geo.pkl')
     
         lifetime = 10 ** model_lf.predict(lf_x)
         gwp = 10 ** model_gwp.predict(np.array(gwp_x).reshape(1, -1))
