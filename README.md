@@ -1,10 +1,6 @@
 # GWP-project
 
-* Website for predicting GWP and AL :point_right: [click](https://low-gwp-ml.streamlit.app/)        
-* Prof. Chung: drygchung@gmail.com              
-  Yang Changwon: sht_ycw79@pusan.ac.kr (DFT)                  
-  Guobin Zhao: sxmzhaogb@gmail.com (machine learning)           
-  Kim, Haewon: haewon0673@naver.com (make figure,machine learning, DFT)                     
+* Website for predicting GWP and AL :point_right: [click](https://low-gwp-ml.streamlit.app/)                 
 * cite as: G. Zhao, H. Kim, C. Ynag, Y. G. Chung. Leveraging Machine Learning to Predict the Atmospheric Lifetime and the Global Warming Potential (GWP) of SF6 Replacement Gases. DOI: 10.1021/acs.jpca.3c07339 :point_right: [click](https://pubs.acs.org/doi/10.1021/acs.jpca.3c07339)                                    
 
 ### Machine learning                          
